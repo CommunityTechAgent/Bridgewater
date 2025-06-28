@@ -20,7 +20,7 @@ export default function Hero() {
       alt: "Jamaica flag map representing Ambassador Bridgewater's service in Jamaica",
     },
     {
-      src: "/images/hero-usa-map.jpg",
+      src: "/images/usa-map.png",
       alt: "United States flag map representing Ambassador Bridgewater's diplomatic service",
     },
     {
