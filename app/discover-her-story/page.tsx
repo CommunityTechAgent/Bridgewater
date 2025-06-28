@@ -41,7 +41,7 @@ export default function DiscoverHerStoryPage() {
               <div className="sticky top-8">
                 <div className="relative group">
                   <img
-                    src="/images/bridging-cover-final.jpg"
+                    src="/images/ambassador-headshot.jpg"
                     alt="Ambassador Pamela Bridgewater"
                     className="w-full rounded-2xl shadow-2xl transform group-hover:scale-105 transition-transform duration-500"
                   />
