@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
+import Link from "next/link"
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -16,11 +17,11 @@ export default function Navigation() {
   }, [])
 
   const navItems = [
-    { name: "About", href: "#about" },
-    { name: "Career", href: "#timeline" },
-    { name: "Achievements", href: "#achievements" },
-    { name: "Testimonials", href: "#testimonials" },
-    { name: "Contact", href: "#contact" },
+    { name: "About", href: "/#about" },
+    { name: "Career", href: "/#timeline" },
+    { name: "Achievements", href: "/#achievements" },
+    { name: "Testimonials", href: "/#testimonials" },
+    { name: "Contact", href: "/#contact" },
   ]
 
   return (
@@ -32,7 +33,9 @@ export default function Navigation() {
       <div className="container mx-auto px-4 lg:px-20">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="text-pearl-white font-serif text-xl lg:text-2xl font-bold">Bridging Troubled Waters</div>
+          <Link href="/" className="text-pearl-white font-serif text-xl lg:text-2xl font-bold">
+            Bridging Troubled Waters
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
