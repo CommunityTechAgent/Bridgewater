@@ -26,7 +26,7 @@ export default function PreOrderPage() {
           <div className="text-center">
             <h1 className="text-4xl lg:text-6xl font-serif font-bold text-pearl-white mb-6">Pre-Order Now</h1>
             <p className="text-xl text-pearl-white/90 max-w-3xl mx-auto">
-              Secure your copy of "Bridging Troubled Waters" - A diplomatic memoir by Ambassador Kamela Bridgewater
+              Secure your copy of "Bridging Troubled Waters" - A diplomatic memoir by Ambassador Pamela Bridgewater
             </p>
           </div>
         </div>
