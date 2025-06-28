@@ -7,6 +7,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 export default function Hero() {
   const [isBookHovered, setIsBookHovered] = useState(false)
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [imagesLoaded, setImagesLoaded] = useState(false)
 
   const heroImages = [
     {
@@ -28,6 +29,7 @@ export default function Hero() {
   ]
 
   useEffect(() => {
+    setImagesLoaded(true)
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroImages.length)
     }, 4000)
@@ -44,6 +46,14 @@ export default function Hero() {
 
   const goToNext = () => {
     setCurrentSlide((prev) => (prev + 1) % heroImages.length)
+  }
+
+  if (!imagesLoaded) {
+    return (
+      <div className="min-h-screen bg-diplomatic-navy flex items-center justify-center">
+        <div className="text-pearl-white">Loading...</div>
+      </div>
+    )
   }
 
   return (
@@ -170,6 +180,9 @@ export default function Hero() {
                     src={image.src || "/placeholder.svg"}
                     alt={image.alt}
                     className="w-full h-full object-contain p-8"
+                    onError={(e) => {
+                      e.currentTarget.src = "/placeholder.svg?height=400&width=800"
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-diplomatic-navy/60 via-transparent to-transparent"></div>
                 </div>
