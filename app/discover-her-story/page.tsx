@@ -197,7 +197,7 @@ export default function DiscoverHerStoryPage() {
               <div className="mt-8 pt-8 border-t border-soft-charcoal/10">
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
-                    href="/"
+                    href="/pre-order"
                     className="bg-ambassador-gold hover:bg-ambassador-gold/90 text-diplomatic-navy font-bold px-8 py-3 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-center"
                   >
                     Pre-Order "Bridging Troubled Waters"
