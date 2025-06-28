@@ -11,7 +11,7 @@ export default function Footer() {
       { name: "Press Kit", href: "#" },
     ],
     book: [
-      { name: "Pre-Order", href: "#" },
+      { name: "Pre-Order", href: "/pre-order" },
       { name: "Book Excerpts", href: "#" },
       { name: "Reviews", href: "#testimonials" },
       { name: "Book Club Guide", href: "#" },

@@ -6,7 +6,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, Phone, MapPin, Send } from "lucide-react"
+import { Mail, Phone, MapPin, Send, BookOpen } from "lucide-react"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -87,6 +87,30 @@ export default function Contact() {
                     <br />
                     United States
                   </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 group">
+                <div className="bg-ambassador-gold p-3 rounded-full group-hover:scale-110 transition-transform duration-300">
+                  <BookOpen className="w-6 h-6 text-diplomatic-navy" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-diplomatic-navy mb-1">Publisher</h3>
+                  <div className="flex items-center gap-3 mb-2">
+                    <img
+                      src="/images/bk-royston-publishing-logo.png"
+                      alt="BK Royston Publishing"
+                      className="h-8 w-auto"
+                    />
+                  </div>
+                  <a
+                    href="http://www.bkroystonpublishing.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-soft-charcoal hover:text-ambassador-gold transition-colors duration-300"
+                  >
+                    www.bkroystonpublishing.com
+                  </a>
                 </div>
               </div>
             </div>
