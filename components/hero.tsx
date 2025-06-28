@@ -112,12 +112,14 @@ export default function Hero() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
-                <Button
-                  size="lg"
-                  className="bg-ambassador-gold hover:bg-ambassador-gold/90 text-diplomatic-navy font-bold px-10 py-5 text-lg rounded-xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-xl hover:shadow-2xl"
-                >
-                  Pre-Order Now
-                </Button>
+                <Link href="/pre-order">
+                  <Button
+                    size="lg"
+                    className="bg-ambassador-gold hover:bg-ambassador-gold/90 text-diplomatic-navy font-bold px-10 py-5 text-lg rounded-xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-xl hover:shadow-2xl w-full"
+                  >
+                    Pre-Order Now
+                  </Button>
+                </Link>
                 <Link href="/discover-her-story">
                   <Button
                     variant="outline"
