@@ -193,6 +193,112 @@ export default function PreOrderPage() {
         </div>
       </section>
 
+      {/* Second Book Section */}
+      <section className="py-16 lg:py-24 bg-warm-ivory">
+        <div className="container mx-auto px-4 lg:px-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-serif font-bold text-diplomatic-navy mb-4">Also Available</h2>
+            <p className="text-xl text-soft-charcoal">Another inspiring work by Ambassador Bridgewater</p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <div className="grid lg:grid-cols-12 gap-12 items-center">
+              {/* Book Visual */}
+              <div className="lg:col-span-4">
+                <div className="relative group">
+                  <div className="transform group-hover:scale-105 transition-transform duration-500">
+                    <div className="relative w-full max-w-sm mx-auto">
+                      <img
+                        src="/images/neutral-on-nothing-cover.jpg"
+                        alt="Neutral on Nothing book cover by Ambassador Pamela Bridgewater Awkard"
+                        className="w-full rounded-2xl shadow-2xl"
+                      />
+                      <div className="absolute -inset-4 bg-gradient-to-r from-ambassador-gold to-amber-400 rounded-2xl -z-10 opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Book Details */}
+              <div className="lg:col-span-8">
+                <div className="bg-pearl-white p-8 rounded-2xl shadow-xl">
+                  <h3 className="text-3xl font-serif font-bold text-diplomatic-navy mb-6">Neutral on Nothing</h3>
+
+                  <div className="prose prose-lg max-w-none mb-8">
+                    <p className="text-soft-charcoal leading-relaxed mb-4">
+                      <em>"Neutral on nothing"</em> was the attitude of the Reverend B. H. Hester, who cared
+                      passionately about the world around him, both here in Fredericksburg and around the nation, even
+                      around the world.
+                    </p>
+
+                    <p className="text-soft-charcoal leading-relaxed mb-4">
+                      Reverend Hester was selected in 1921 to serve as the eighth pastor of Shiloh Baptist Church (Old
+                      Site). He was formally installed in 1922 after receiving degrees from Biddle University in North
+                      Carolina and from Virginia Union University in Richmond.
+                    </p>
+
+                    <p className="text-soft-charcoal leading-relaxed">
+                      His forty years as pastor of this congregation were remarkable in many ways. Drawing on many
+                      original documents and family scrapbooks, his granddaughter, the Hon. Pamela Bridgewater Awkard, a
+                      retired U.S. ambassador, has written a beautifully illustrated book on his life as a pastor,
+                      educator, writer, and committed social activist.
+                    </p>
+                  </div>
+
+                  {/* Pricing & Order Section */}
+                  <div className="bg-gradient-to-r from-diplomatic-navy to-ocean-blue p-6 rounded-xl text-pearl-white">
+                    <div className="flex items-center justify-between mb-4">
+                      <div>
+                        <h4 className="text-xl font-bold mb-1">Special Price</h4>
+                        <p className="text-pearl-white/80 text-sm">Includes shipping and handling</p>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-3xl font-bold text-ambassador-gold">$25</div>
+                        <div className="text-xs text-pearl-white/80">USD</div>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-pearl-white/20 pt-4 mb-4">
+                      <div className="grid grid-cols-2 gap-3 text-xs">
+                        <div className="flex items-center gap-2">
+                          <BookOpen className="w-3 h-3 text-ambassador-gold" />
+                          <span>Illustrated Edition</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Truck className="w-3 h-3 text-ambassador-gold" />
+                          <span>Free Shipping</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Star className="w-3 h-3 text-ambassador-gold" />
+                          <span>Historical Documents</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Shield className="w-3 h-3 text-ambassador-gold" />
+                          <span>Secure Payment</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <a
+                      href="https://square.link/u/aoClIkCE"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full bg-ambassador-gold hover:bg-ambassador-gold/90 text-diplomatic-navy font-bold py-3 px-6 rounded-lg text-center transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                    >
+                      Order "Neutral on Nothing" - $25
+                    </a>
+
+                    <p className="text-center text-pearl-white/60 text-xs mt-3">
+                      Secure payment processing powered by Square
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </main>
   )
