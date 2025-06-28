@@ -86,60 +86,8 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Image Slider */}
-        <div className="max-w-4xl mx-auto mb-12 animate-fade-in-up animation-delay-800">
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-            <div className="relative h-80 lg:h-96">
-              {heroImages.map((image, index) => (
-                <div
-                  key={index}
-                  className={`absolute inset-0 transition-opacity duration-1000 ${
-                    index === currentSlide ? "opacity-100" : "opacity-0"
-                  }`}
-                >
-                  <img
-                    src={image.src || "/placeholder.svg"}
-                    alt={image.alt}
-                    className="w-full h-full object-contain p-8"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-diplomatic-navy/60 via-transparent to-transparent"></div>
-                </div>
-              ))}
-            </div>
-
-            {/* Navigation Arrows */}
-            <button
-              onClick={goToPrevious}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-pearl-white/20 backdrop-blur-sm text-pearl-white p-3 rounded-full hover:bg-ambassador-gold hover:text-diplomatic-navy transform hover:scale-110 transition-all duration-300"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-            <button
-              onClick={goToNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-pearl-white/20 backdrop-blur-sm text-pearl-white p-3 rounded-full hover:bg-ambassador-gold hover:text-diplomatic-navy transform hover:scale-110 transition-all duration-300"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
-
-            {/* Dots Indicator */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-              {heroImages.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide
-                      ? "bg-ambassador-gold scale-125"
-                      : "bg-pearl-white/50 hover:bg-pearl-white/80"
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-
         {/* Content and Book */}
-        <div className="grid lg:grid-cols-12 gap-8 items-center">
+        <div className="grid lg:grid-cols-12 gap-8 items-center mb-12">
           {/* Content */}
           <div className="lg:col-span-7 text-center lg:text-left">
             <div className="space-y-8 animate-fade-in-up animation-delay-1000">
@@ -203,6 +151,58 @@ export default function Hero() {
                   ></div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Image Slider */}
+        <div className="max-w-4xl mx-auto animate-fade-in-up animation-delay-800">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative h-80 lg:h-96">
+              {heroImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`absolute inset-0 transition-opacity duration-1000 ${
+                    index === currentSlide ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  <img
+                    src={image.src || "/placeholder.svg"}
+                    alt={image.alt}
+                    className="w-full h-full object-contain p-8"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-diplomatic-navy/60 via-transparent to-transparent"></div>
+                </div>
+              ))}
+            </div>
+
+            {/* Navigation Arrows */}
+            <button
+              onClick={goToPrevious}
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-pearl-white/20 backdrop-blur-sm text-pearl-white p-3 rounded-full hover:bg-ambassador-gold hover:text-diplomatic-navy transform hover:scale-110 transition-all duration-300"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <button
+              onClick={goToNext}
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-pearl-white/20 backdrop-blur-sm text-pearl-white p-3 rounded-full hover:bg-ambassador-gold hover:text-diplomatic-navy transform hover:scale-110 transition-all duration-300"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+
+            {/* Dots Indicator */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+              {heroImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentSlide
+                      ? "bg-ambassador-gold scale-125"
+                      : "bg-pearl-white/50 hover:bg-pearl-white/80"
+                  }`}
+                />
+              ))}
             </div>
           </div>
         </div>
