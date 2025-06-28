@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import Link from "next/link"
 
 export default function Hero() {
   const [isBookHovered, setIsBookHovered] = useState(false)
@@ -117,13 +118,15 @@ export default function Hero() {
                 >
                   Pre-Order Now
                 </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-2 border-ambassador-gold text-ambassador-gold hover:bg-ambassador-gold hover:text-diplomatic-navy px-10 py-5 text-lg font-bold rounded-xl transform hover:scale-105 transition-all duration-300 bg-transparent shadow-lg hover:shadow-xl"
-                >
-                  Discover Her Story
-                </Button>
+                <Link href="/discover-her-story">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-2 border-ambassador-gold text-ambassador-gold hover:bg-ambassador-gold hover:text-diplomatic-navy px-10 py-5 text-lg font-bold rounded-xl transform hover:scale-105 transition-all duration-300 bg-transparent shadow-lg hover:shadow-xl w-full"
+                  >
+                    Discover Her Story
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
