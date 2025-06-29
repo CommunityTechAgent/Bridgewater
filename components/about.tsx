@@ -211,7 +211,7 @@ export default function About() {
                           <h5 className="font-bold text-diplomatic-navy mb-2">{card.subtitle}</h5>
                           <p className="text-soft-charcoal leading-relaxed mb-4">{card.fullDescription}</p>
                           <blockquote className="italic text-ambassador-gold font-medium border-l-4 border-ambassador-gold pl-4">
-                            "{card.quote}"
+                            {card.quote}
                           </blockquote>
                         </div>
                       </div>
