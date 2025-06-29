@@ -1,63 +1,163 @@
-import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component"
-import "react-vertical-timeline-component/style.min.css"
-import { FaBriefcase, FaGraduationCap } from "react-icons/fa"
+"use client"
 
-const Timeline = () => {
+import { useEffect, useRef, useState } from "react"
+import { Calendar, MapPin, Award } from "lucide-react"
+
+export default function Timeline() {
+  const [visibleItems, setVisibleItems] = useState<number[]>([])
+  const timelineRef = useRef<HTMLElement>(null)
+
   const timelineEvents = [
     {
-      date: "2023 - Present",
-      title: "Software Engineer",
-      location: "Google, Mountain View, CA",
+      year: "1990",
+      title: "Diplomatic Career Begins",
+      location: "Washington, D.C.",
       description:
-        "Developing and maintaining large-scale web applications using React, Node.js, and GraphQL. Collaborating with cross-functional teams to deliver high-quality software solutions.",
-      icon: <FaBriefcase />,
-      iconStyle: { background: "rgb(33, 150, 243)", color: "#fff" },
+        "Joined the Foreign Service as a junior diplomat, beginning a journey that would span three decades.",
+      icon: Calendar,
     },
     {
-      date: "2018 - 2022",
-      title: "Bachelor of Science in Computer Science",
-      location: "Stanford University, Stanford, CA",
-      description:
-        "Graduated with honors, majoring in Computer Science. Focused on software engineering, algorithms, and data structures. Participated in various hackathons and coding competitions.",
-      icon: <FaGraduationCap />,
-      iconStyle: { background: "rgb(233, 30, 99)", color: "#fff" },
+      year: "1995",
+      title: "First International Assignment",
+      location: "Embassy in Prague",
+      description: "Served as Political Officer during the critical post-Cold War transition period in Eastern Europe.",
+      icon: MapPin,
     },
     {
-      date: "2014 - 2018",
-      title: "High School Diploma",
-      location: "Palo Alto High School, Palo Alto, CA",
-      description: "Graduated with honors. Participated in the Math Club and Science Olympiad.",
-      icon: <FaGraduationCap />,
-      iconStyle: { background: "rgb(233, 30, 99)", color: "#fff" },
+      year: "2001",
+      title: "Crisis Negotiation Success",
+      location: "Balkans Region",
+      description: "Led successful peace negotiations that prevented escalation of regional conflicts.",
+      icon: Award,
     },
     {
-      date: "2010-2013",
+      year: "2010-2013",
       title: "Champion of Security in Jamaica",
       location: "Kingston, Jamaica",
       description:
-        'When Ambassador Bridgewater assumed her duties in Jamaica, the bilateral relationship between the U.S. and Jamaica was strained and distrustful. Jamaica had been without a U.S. ambassador for over fifteen months and relations had been tested over the government of Jamaica\'s protracted refusal to extradite a "drug lord," Christopher "Dudas" Coke, who was wanted in the U.S. for drug and related crimes. Coke is now in prison in the U.S.\n\nAmbassador Bridgewater not only smoothed and recalibrated the relationship with the government. She worked on many fronts to ensure that the people of Jamaica understood that the U.S. relationship with Jamaica was not one-dimensional, focused exclusively on security partnerships, countering illegal narcotics trafficking and other criminal activity. She utilized many tools of diplomatic engagement including commercial, cultural, consular and public diplomacy avenues to successfully bridge the troubled waters she encountered to put the relationship back on track.',
-      icon: <FaBriefcase />,
-      iconStyle: { background: "rgb(33, 150, 243)", color: "#fff" },
+        'Ambassador Bridgewater inherited severely strained U.S.-Jamaica relations after a 15-month diplomatic void caused by Jamaica\'s refusal to extradite drug lord Christopher "Dudas" Coke. She successfully rebuilt trust by broadening the partnership beyond security concerns, using comprehensive diplomatic tools including commercial, cultural, and public diplomacy to restore bilateral cooperation.',
+      icon: Award,
+    },
+    {
+      year: "2015",
+      title: "Senior Diplomatic Advisor",
+      location: "State Department",
+      description: "Served as Senior Advisor on African Affairs, shaping policy across the continent.",
+      icon: Calendar,
+    },
+    {
+      year: "2020",
+      title: "Memoir Publication",
+      location: "Global Release",
+      description: 'Published "Bridging Troubled Waters" sharing decades of diplomatic insights.',
+      icon: Award,
     },
   ]
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = Number.parseInt(entry.target.getAttribute("data-index") || "0")
+            setVisibleItems((prev) => [...prev, index])
+          }
+        })
+      },
+      { threshold: 0.5 },
+    )
+
+    const timelineItems = timelineRef.current?.querySelectorAll(".timeline-item")
+    timelineItems?.forEach((item) => observer.observe(item))
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <VerticalTimeline>
-      {timelineEvents.map((event, index) => (
-        <VerticalTimelineElement
-          key={index}
-          className="vertical-timeline-element--work"
-          date={event.date}
-          iconStyle={event.iconStyle}
-          icon={event.icon}
-        >
-          <h3 className="vertical-timeline-element-title">{event.title}</h3>
-          <h4 className="vertical-timeline-element-subtitle">{event.location}</h4>
-          <p>{event.description}</p>
-        </VerticalTimelineElement>
-      ))}
-    </VerticalTimeline>
+    <section ref={timelineRef} id="timeline" className="py-16 lg:py-24 bg-pearl-white relative overflow-hidden">
+      {/* World Map Background */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-10">
+        <img
+          src="/images/world-map-background.png"
+          alt="World map background"
+          className="w-full h-full object-contain max-w-6xl"
+        />
+      </div>
+
+      <div className="container mx-auto px-4 lg:px-16 relative z-10">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl lg:text-4xl font-serif font-bold text-diplomatic-navy mb-4">Diplomatic Journey</h2>
+          <p className="text-xl text-soft-charcoal max-w-3xl mx-auto">
+            Three decades of service, negotiation, and bridge-building across the globe
+          </p>
+        </div>
+
+        <div className="relative">
+          {/* Timeline Line */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-ambassador-gold to-ocean-blue hidden lg:block"></div>
+
+          <div className="space-y-8 lg:space-y-12">
+            {timelineEvents.map((event, index) => {
+              const Icon = event.icon
+              const isVisible = visibleItems.includes(index)
+              const isEven = index % 2 === 0
+
+              return (
+                <div
+                  key={event.year}
+                  className={`timeline-item relative ${
+                    isEven ? "lg:flex-row" : "lg:flex-row-reverse"
+                  } flex flex-col lg:flex items-center`}
+                  data-index={index}
+                >
+                  {/* Content Card */}
+                  <div
+                    className={`w-full lg:w-5/12 transform transition-all duration-1000 ${
+                      isVisible
+                        ? "translate-x-0 opacity-100"
+                        : isEven
+                          ? "-translate-x-10 opacity-0"
+                          : "translate-x-10 opacity-0"
+                    }`}
+                  >
+                    <div className="bg-warm-ivory p-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 group hover:ring-4 hover:ring-[#D4AF37] hover:ring-opacity-50">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="bg-ambassador-gold p-3 rounded-full group-hover:scale-110 transition-transform duration-300">
+                          <Icon className="w-6 h-6 text-diplomatic-navy" />
+                        </div>
+                        <div>
+                          <div className="text-2xl font-bold text-ambassador-gold">{event.year}</div>
+                          <div className="text-sm text-soft-charcoal flex items-center gap-1">
+                            <MapPin className="w-4 h-4" />
+                            {event.location}
+                          </div>
+                        </div>
+                      </div>
+
+                      <h3 className="text-xl font-bold text-diplomatic-navy mb-3 group-hover:text-ambassador-gold transition-colors duration-300">
+                        {event.title}
+                      </h3>
+
+                      <p className="text-soft-charcoal leading-relaxed">{event.description}</p>
+                    </div>
+                  </div>
+
+                  {/* Timeline Dot */}
+                  <div
+                    className={`hidden lg:flex w-6 h-6 bg-ambassador-gold rounded-full border-4 border-pearl-white shadow-lg transform transition-all duration-1000 ${
+                      isVisible ? "scale-100 opacity-100" : "scale-0 opacity-0"
+                    }`}
+                    style={{ transitionDelay: "500ms" }}
+                  ></div>
+
+                  {/* Spacer */}
+                  <div className="w-full lg:w-5/12"></div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }
-
-export default Timeline
