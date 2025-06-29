@@ -44,7 +44,7 @@ export default function About() {
       year: "2010-2013",
       shortDescription: "U.S. Ambassador to Jamaica under President Barack Obama, focusing on regional security.",
       fullDescription:
-        "Prioritized strengthening security cooperation through the Caribbean Basin Security Initiative. Advanced critical partnerships to combat drug trafficking and transnational crime, enhancing regional stability and U.S.-Jamaica relations. Transformed security cooperation in the Caribbean region.",
+        'Ambassador Bridgewater inherited severely strained U.S.-Jamaica relations after a 15-month diplomatic void caused by Jamaica\'s refusal to extradite drug lord Christopher "Dudas" Coke. She successfully rebuilt trust by broadening the partnership beyond security concerns, using comprehensive diplomatic tools including commercial, cultural, and public diplomacy to restore bilateral cooperation.',
       quote: "Building safer communities through diplomatic partnership",
       bgGradient: "from-green-100 to-teal-100",
       iconColor: "text-green-600",
