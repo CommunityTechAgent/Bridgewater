@@ -35,7 +35,7 @@ export default function Timeline() {
       title: "Ambassador to Ghana",
       location: "Accra, Ghana",
       description:
-        "Served as U.S. Ambassador to Ghana, Oversaw construction of a massive new U.S. embassy compound in Ghana and facilitated the country's successful application for a $550 million Millennium Challenge Compact. Strengthened bilateral relations and managed a highly successful three-day presidential visit by President and Mrs. George W. Bush alongside Secretary of State Condoleezza Rice.",
+        "Served as U.S. Ambassador to Ghana, Oversaw new U.S. embassy construction, facilitated Ghana's $550 million Millennium Challenge Compact, and managed successful three-day visit by President Bush and Secretary Rice.",
       icon: Award,
     },
     {
