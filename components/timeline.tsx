@@ -9,7 +9,7 @@ export default function Timeline() {
 
   const timelineEvents = [
     {
-      year: "1990",
+      year: "1980",
       title: "Diplomatic Career Begins",
       location: "Washington, D.C.",
       description:
