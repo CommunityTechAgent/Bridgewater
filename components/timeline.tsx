@@ -43,7 +43,7 @@ export default function Timeline() {
       title: "Champion of Security in Jamaica",
       location: "Kingston, Jamaica",
       description:
-        'Ambassador Bridgewater inherited severely strained U.S.-Jamaica relations after a 15-month diplomatic void caused by Jamaica\'s refusal to extradite drug lord Christopher "Dudas" Coke. She successfully rebuilt trust by broadening the partnership beyond security concerns, using comprehensive diplomatic tools including commercial, cultural, and public diplomacy to restore bilateral cooperation.',
+        "Ambassador Bridgewater restored strained U.S.-Jamaica relations after extradition crisis by broadening partnership beyond security through comprehensive diplomatic engagement.",
       icon: Award,
     },
     {
