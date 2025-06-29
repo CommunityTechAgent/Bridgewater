@@ -31,6 +31,14 @@ export default function Timeline() {
       icon: Award,
     },
     {
+      year: "2005-2008",
+      title: "Ambassador to Ghana",
+      location: "Accra, Ghana",
+      description:
+        "Served as U.S. Ambassador to Ghana, strengthening bilateral relations and promoting democratic governance, economic development, and regional security cooperation in West Africa during a critical period of Ghana's democratic consolidation.",
+      icon: Award,
+    },
+    {
       year: "2010-2013",
       title: "Champion of Security in Jamaica",
       location: "Kingston, Jamaica",
