@@ -31,7 +31,7 @@ export default function About() {
       year: "1990s",
       shortDescription: "Special Coordinator for Peace in Liberia during the devastating civil war.",
       fullDescription:
-        "Led U.S. delegations to peace talks at the height of Liberia's devastating civil war, playing a key role in setting the nation on a path to recovery and lasting peace. Instrumental in ending one of Africa's most destructive conflicts through diplomatic courage and strategic negotiation.",
+        "Led U.S. delegation to peace talks at the height of Liberia's devastating civil war, playing a key role in setting the nation on a path to recovery and lasting peace. Instrumental in ending one of Africa's most destructive conflicts through diplomatic courage and strategic negotiation.",
       quote: "When diplomacy matters most, courage leads the way",
       bgGradient: "from-blue-100 to-indigo-100",
       iconColor: "text-blue-600",
