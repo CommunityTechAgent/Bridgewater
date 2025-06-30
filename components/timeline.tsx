@@ -37,7 +37,7 @@ export default function Timeline() {
       icon: Award,
     },
     {
-      year: "2005-2008",
+      year: "2005",
       title: "Ambassador to Ghana",
       location: "Accra, Ghana",
       description:
@@ -45,7 +45,7 @@ export default function Timeline() {
       icon: Award,
     },
     {
-      year: "2010-2013",
+      year: "2010",
       title: "Champion of Security in Jamaica",
       location: "Kingston, Jamaica",
       description:
