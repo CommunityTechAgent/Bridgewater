@@ -11,22 +11,22 @@ export default function Testimonials() {
     {
       quote:
         "Ambassador Bridgewater's memoir is a masterclass in diplomacy. Her insights into conflict resolution and cultural understanding are invaluable for anyone interested in international relations.",
-      author: "Dr. Sarah Mitchell",
-      title: "Former Secretary of State",
+      author: "Kevin Pryor",
+      title: "Founder of Community Tech",
       image: "/placeholder.svg?height=80&width=80",
     },
     {
       quote:
         "A compelling narrative that bridges the gap between policy and humanity. Bridgewater's experiences offer profound lessons in leadership and perseverance.",
-      author: "Ambassador John Chen",
-      title: "UN Special Envoy",
+      author: "Dr Mike Levey,
+      title: "Special Envoy",
       image: "/placeholder.svg?height=80&width=80",
     },
     {
       quote:
         "This memoir is essential reading for diplomats and peace-builders. Bridgewater's ability to find common ground in the most challenging situations is truly inspiring.",
       author: "Prof. Maria Rodriguez",
-      title: "International Relations, Harvard",
+      title: "International Relations,",
       image: "/placeholder.svg?height=80&width=80",
     },
   ]
