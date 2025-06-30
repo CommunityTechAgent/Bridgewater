@@ -59,15 +59,12 @@ export default function Hero() {
 
   return (
     <section className="min-h-screen bg-gradient-to-br from-diplomatic-navy via-ocean-blue to-diplomatic-navy relative overflow-hidden">
-      {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[url('/placeholder.svg?height=100&width=100')] bg-repeat"></div>
       </div>
 
       <div className="container mx-auto px-4 lg:px-16 pt-24 pb-16">
-        {/* Centered Header */}
         <div className="text-center mb-12 relative max-w-6xl mx-auto">
-          {/* Left Header Image */}
           <div className="absolute left-4 lg:left-0 top-1/2 -translate-y-1/2 z-0">
             <img
               src="/images/l-image-header-m.png"
@@ -76,7 +73,6 @@ export default function Hero() {
             />
           </div>
 
-          {/* Right Header Image */}
           <div className="absolute right-4 lg:right-0 top-1/2 -translate-y-1/2 z-0">
             <img
               src="/images/l-image-header-m.png"
@@ -97,9 +93,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Content and Book */}
         <div className="grid lg:grid-cols-12 gap-8 items-center mb-12">
-          {/* Content */}
           <div className="lg:col-span-7 text-center lg:text-left">
             <div className="space-y-8 animate-fade-in-up animation-delay-1000">
               <p className="text-lg lg:text-xl text-pearl-white/90 leading-relaxed max-w-2xl mx-auto lg:mx-0">
@@ -133,7 +127,6 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Book Visual */}
           <div className="lg:col-span-5 flex justify-center">
             <div
               className="relative group cursor-pointer animate-fade-in-up animation-delay-1200"
@@ -146,7 +139,6 @@ export default function Hero() {
                 }`}
               >
                 <div className="relative w-64 h-80 lg:w-72 lg:h-88">
-                  {/* Book Cover Image */}
                   <div className="absolute inset-0 rounded-lg shadow-2xl overflow-hidden">
                     <img
                       src="/images/bridging-cover-hero.jpg"
@@ -155,10 +147,8 @@ export default function Hero() {
                     />
                   </div>
 
-                  {/* Book Spine */}
                   <div className="absolute -right-2 top-2 w-4 h-80 lg:h-88 bg-gradient-to-b from-black to-gray-900 rounded-r-lg shadow-lg"></div>
 
-                  {/* Glow Effect */}
                   <div
                     className={`absolute inset-0 bg-ambassador-gold/20 rounded-lg blur-xl transition-opacity duration-500 ${
                       isBookHovered ? "opacity-100" : "opacity-0"
@@ -170,7 +160,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Image Slider */}
         <div className="max-w-4xl mx-auto animate-fade-in-up animation-delay-800">
           <div className="relative rounded-2xl overflow-hidden shadow-2xl">
             <div className="relative h-80 lg:h-96">
@@ -194,7 +183,6 @@ export default function Hero() {
               ))}
             </div>
 
-            {/* Navigation Arrows */}
             <button
               onClick={goToPrevious}
               className="absolute left-4 top-1/2 -translate-y-1/2 bg-pearl-white/20 backdrop-blur-sm text-pearl-white p-3 rounded-full hover:bg-ambassador-gold hover:text-diplomatic-navy transform hover:scale-110 transition-all duration-300"
@@ -208,7 +196,6 @@ export default function Hero() {
               <ChevronRight className="w-6 h-6" />
             </button>
 
-            {/* Dots Indicator */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
               {heroImages.map((_, index) => (
                 <button
