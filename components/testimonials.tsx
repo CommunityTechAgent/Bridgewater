@@ -12,7 +12,7 @@ export default function Testimonials() {
       quote:
         "Ambassador Bridgewater's memoir is a masterclass in diplomacy. Her insights into conflict resolution and cultural understanding are invaluable for anyone interested in international relations.",
       author: "Kevin Pryor",
-      title: "Founder of Community Tech",
+      title: "Community Tech",
       image: "/placeholder.svg?height=80&width=80",
     },
     {
