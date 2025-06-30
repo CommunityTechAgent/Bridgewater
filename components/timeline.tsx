@@ -13,7 +13,7 @@ export default function Timeline() {
       title: "Diplomatic Career Begins",
       location: "Washington, D.C.",
       description:
-        "Joined the Foreign Service as a junior diplomat, beginning a journey that would span three decades.",
+        "Joined the Foreign Service as a Junior Officer, beginning a journey that would span three decades.",
       icon: Calendar,
     },
     {
@@ -24,7 +24,7 @@ export default function Timeline() {
       icon: MapPin,
     },
     {
-      year: "2001",
+      year: "1996",
       title: "Crisis Negotiation Success",
       location: "Balkans Region",
       description: "Led successful peace negotiations that prevented escalation of regional conflicts.",
@@ -43,7 +43,7 @@ export default function Timeline() {
       title: "Champion of Security in Jamaica",
       location: "Kingston, Jamaica",
       description:
-        "Ambassador Bridgewater restored strained U.S.-Jamaica relations after extradition crisis by broadening partnership beyond security through comprehensive diplomatic engagement.",
+        "Ambassador Bridgewater repaired strained U.S.-Jamaica relations after extradition crisis by broadening partnership beyond security through comprehensive diplomatic engagement.",
       icon: Award,
     },
     {
