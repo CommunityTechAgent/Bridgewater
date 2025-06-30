@@ -12,16 +12,14 @@ export default function Timeline() {
       year: "1980",
       title: "Diplomatic Career Begins",
       location: "Washington, D.C.",
-      description:
-        "Joined the Foreign Service as a Junior Officer, beginning a journey that would span three decades.",
+      description: "Joined the Foreign Service as a Junior Officer, beginning a journey that would span three decades.",
       icon: Calendar,
     },
     {
       year: "1982",
       title: "Vice Consul",
       location: "Brussels, Belgium",
-      description:
-        "Served in the Joint Administrative Services Section.",
+      description: "Served in the Joint Administrative Services Section.",
       icon: Calendar,
     },
     {
@@ -35,7 +33,7 @@ export default function Timeline() {
       year: "1996",
       title: "Deputy Chief of Mission",
       location: "Nassau Bahamas",
-      description: "Led successful negotiations that prevented escalation of regional conflicts.",  
+      description: "Led successful negotiations that prevented escalation of regional conflicts.",
       icon: Award,
     },
     {
@@ -61,17 +59,18 @@ export default function Timeline() {
       description: "Served as Senior Advisor for the Department of State and other U.S. government agencies.",
       icon: Calendar,
     },
+    {
       year: "2019",
       title: "Author",
       location: "Global Release",
-      description: Neutral on Nothing: The Social Activism of Rev. Dr. B. H. Hester
+      description: "Published 'Neutral on Nothing: The Social Activism of Rev. Dr. B. H. Hester'",
       icon: Award,
     },
     {
       year: "2020",
       title: "Memoir Publication",
       location: "Global Release",
-      description: 'Published "Bridging Troubled Waters" sharing decades of diplomatic insights.',
+      description: "Published 'Bridging Troubled Waters' sharing decades of diplomatic insights.",
       icon: Award,
     },
   ]
