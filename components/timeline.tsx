@@ -17,6 +17,14 @@ export default function Timeline() {
       icon: Calendar,
     },
     {
+      year: "1982",
+      title: "Vice Consul",
+      location: "Brussels, Belgium",
+      description:
+        "Served in the Joint Administrative Services Section.",
+      icon: Calendar,
+    },
+    {
       year: "1995",
       title: "First International Assignment",
       location: "Embassy in Prague",
@@ -25,9 +33,9 @@ export default function Timeline() {
     },
     {
       year: "1996",
-      title: "Crisis Negotiation Success",
-      location: "Balkans Region",
-      description: "Led successful peace negotiations that prevented escalation of regional conflicts.",
+      title: "Deputy Chief of Mission",
+      location: "Nassau Bahamas",
+      description: "Led successful negotiations that prevented escalation of regional conflicts.",  
       icon: Award,
     },
     {
@@ -48,10 +56,16 @@ export default function Timeline() {
     },
     {
       year: "2015",
-      title: "Senior Diplomatic Advisor",
+      title: "Senior Consultant",
       location: "State Department",
-      description: "Served as Senior Advisor on African Affairs, shaping policy across the continent.",
+      description: "Served as Senior Advisor for the Department of State and other U.S. government agencies.",
       icon: Calendar,
+    },
+      year: "2019",
+      title: "Author",
+      location: "Global Release",
+      description: Neutral on Nothing: The Social Activism of Rev. Dr. B. H. Hester
+      icon: Award,
     },
     {
       year: "2020",
