@@ -14,7 +14,7 @@ export default function About() {
       icon: Globe,
       title: "Historic Trailblazer in South Africa",
       subtitle: "Breaking Barriers in History's Most Critical Moment",
-      year: "1992-1997",
+      year: "1990-1996",
       shortDescription:
         "First African-American woman Consul General in Durban, South Africa during apartheid transition.",
       fullDescription:
@@ -28,7 +28,7 @@ export default function About() {
       icon: Heart,
       title: "Peacemaker in War-Torn Liberia",
       subtitle: "Leading Peace in Times of Crisis",
-      year: "1990s",
+      year: "2003",
       shortDescription: "Special Coordinator for Peace in Liberia during the devastating civil war.",
       fullDescription:
         "Led U.S. delegations to peace talks at the height of Liberia's devastating civil war, playing a key role in setting the nation on a path to recovery and lasting peace. Instrumental in ending one of Africa's most destructive conflicts through diplomatic courage and strategic negotiation.",
@@ -44,7 +44,7 @@ export default function About() {
       year: "2010-2013",
       shortDescription: "U.S. Ambassador to Jamaica under President Barack Obama, focusing on regional security.",
       fullDescription:
-        "Prioritized strengthening security cooperation through the Caribbean Basin Security Initiative. Advanced critical partnerships to combat drug trafficking and transnational crime, enhancing regional stability and U.S.-Jamaica relations. Transformed security cooperation in the Caribbean region.",
+        "Repaired strained relations and restored the positive bilateral relationship through innovative and public diplomacy engagement. Transformed security cooperation in the Caribbean region.",
       quote: "Building safer communities through diplomatic partnership",
       bgGradient: "from-green-100 to-teal-100",
       iconColor: "text-green-600",
@@ -57,7 +57,7 @@ export default function About() {
       year: "Throughout Career",
       shortDescription: "Tireless advocate for women, children, and gender equality in diplomatic service.",
       fullDescription:
-        "Spoken publicly about the need for workplace transformation and self-transformation to break barriers for women. Urged women to be present at decision-making tables and advocate for their positions. Mentored students who became notable leaders in law, government, academia, and foreign affairs. Recipient of Girl Scouts Lifetime Achievement Award and 100 Black Women's Candace Award.",
+        "Spoken publicly about the need for workplace transformation and self-transformation to break barriers for women. Urged women to be present at decision-making tables and advocate for their positions. Mentored students who became notable leaders in law, government, academia, and foreign affairs. Recipient of Girl Scouts of Virginia Lifetime Achievement Award and 100 Black Women's Candace Award.",
       quote: "Pam's Principles: Believe in yourself, be passionate, stand up for what's right",
       bgGradient: "from-purple-100 to-pink-100",
       iconColor: "text-purple-600",

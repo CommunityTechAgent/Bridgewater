@@ -9,6 +9,7 @@ export default function Hero() {
   const [isBookHovered, setIsBookHovered] = useState(false)
   const [currentSlide, setCurrentSlide] = useState(0)
   const [imagesLoaded, setImagesLoaded] = useState(false)
+  const [loadedImages, setLoadedImages] = useState(0)
 
   const heroImages = [
     {
@@ -30,11 +31,48 @@ export default function Hero() {
   ]
 
   useEffect(() => {
-    setImagesLoaded(true)
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroImages.length)
-    }, 4000)
-    return () => clearInterval(interval)
+    let interval: NodeJS.Timeout | null = null
+
+    // Preload images
+    const imagePromises = heroImages.map((image) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image()
+        img.onload = () => {
+          setLoadedImages(prev => prev + 1)
+          resolve(image)
+        }
+        img.onerror = () => {
+          setLoadedImages(prev => prev + 1)
+          resolve(image) // Resolve even on error to continue
+        }
+        img.src = image.src
+      })
+    })
+
+    const startAutoRotation = () => {
+      interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % heroImages.length)
+      }, 4000)
+    }
+
+    Promise.all(imagePromises).then(() => {
+      setImagesLoaded(true)
+      // Start auto-rotation after images are loaded
+      setTimeout(startAutoRotation, 1000)
+    }).catch(() => {
+      // Fallback: if image loading fails, still show the slider after a timeout
+      setTimeout(() => {
+        setImagesLoaded(true)
+        // Start auto-rotation even if images failed
+        setTimeout(startAutoRotation, 1000)
+      }, 2000)
+    })
+
+    return () => {
+      if (interval) {
+        clearInterval(interval)
+      }
+    }
   }, [heroImages.length])
 
   const goToSlide = (index: number) => {
@@ -52,7 +90,18 @@ export default function Hero() {
   if (!imagesLoaded) {
     return (
       <div className="min-h-screen bg-diplomatic-navy flex items-center justify-center">
-        <div className="text-pearl-white">Loading...</div>
+        <div className="text-center">
+          <div className="text-pearl-white text-xl mb-4">Loading Ambassador Bridgewater's Story...</div>
+          <div className="w-64 bg-pearl-white/20 rounded-full h-2">
+            <div 
+              className="bg-ambassador-gold h-2 rounded-full transition-all duration-300"
+              style={{ width: `${(loadedImages / heroImages.length) * 100}%` }}
+            ></div>
+          </div>
+          <div className="text-pearl-white/70 mt-2">
+            {loadedImages} of {heroImages.length} images loaded
+          </div>
+        </div>
       </div>
     )
   }
@@ -185,6 +234,7 @@ export default function Hero() {
                     src={image.src || "/placeholder.svg"}
                     alt={image.alt}
                     className="w-full h-full object-contain p-8"
+                    loading="eager"
                     onError={(e) => {
                       e.currentTarget.src = "/placeholder.svg?height=400&width=800"
                     }}

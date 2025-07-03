@@ -11,8 +11,8 @@ export default function Testimonials() {
     {
       quote:
         "Ambassador Bridgewater's memoir is a masterclass in diplomacy. Her insights into conflict resolution and cultural understanding are invaluable for anyone interested in international relations.",
-      author: "Dr. Sarah Mitchell",
-      title: "Former Secretary of State",
+      author: "U.S. Ambassador Harry Thomas",
+      title: "former Director General of the Foreign Service",
       image: "/placeholder.svg?height=80&width=80",
     },
     {
