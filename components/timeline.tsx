@@ -37,6 +37,11 @@ export default function Timeline() {
       icon: Award,
     },
     {
+      year: "2000"
+      location: "Republic of Benin",
+      description: "Helped solidify fledgling democratic institutions; hosted successful Africa Growth and Opportunity Act forum;facilitated business and commercial opportunities.",
+    },
+    {
       year: "2005",
       title: "Ambassador to Ghana",
       location: "Accra, Ghana",
