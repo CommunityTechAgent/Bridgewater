@@ -12,15 +12,11 @@ export default function Hero() {
 
   const heroImages = [
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/map_belgium.jpg-cC6CSmjen21ZmnW4DOUyMdjPy2BOLt.jpeg",
-      alt: "Belgium flag map representing Ambassador Bridgewater's diplomatic service in Brussels",
-    },
-    {
       src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/South%20Africa-KrtarH7JxobEydl6bqFx88OXa3B7RM.png",
       alt: "South Africa flag map representing Ambassador Bridgewater's historic service during apartheid transition",
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/the_island_of_the_Bahamas-gatvsc946Q7QtqVIabvfYTnL39p1hz.png",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Map_of_Bahamas-f2aU0pWtFuN9PX6Emt2ahEuHtbynRp.png",
       alt: "Bahamas flag map representing Ambassador Bridgewater's service as Deputy Chief of Mission",
     },
     {
