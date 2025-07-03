@@ -64,12 +64,15 @@ export default function Hero() {
   return (
     <section className="min-h-screen bg-gradient-to-br from-diplomatic-navy via-ocean-blue to-diplomatic-navy relative overflow-hidden">
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[url('/placeholder.svg?height=100&width=100')] bg-repeat"></div>
+        <div
+          className="absolute inset-0 bg-repeat"
+          style={{ backgroundImage: "url('/placeholder.svg?height=100&width=100')" }}
+        ></div>
       </div>
 
       <div className="container mx-auto px-4 lg:px-16 pt-24 pb-16">
         <div className="text-center mb-12 relative max-w-6xl mx-auto">
-          <div className="absolute left-4 lg:left-0 top-1/2 -translate-y-1/2 z-0">
+          <div className="absolute left-4 lg:left-0 top-1/2 transform -translate-y-1/2 z-0">
             <img
               src="/images/l-image-header-m.png"
               alt="Diplomatic emblem"
@@ -77,7 +80,7 @@ export default function Hero() {
             />
           </div>
 
-          <div className="absolute right-4 lg:right-0 top-1/2 -translate-y-1/2 z-0">
+          <div className="absolute right-4 lg:right-0 top-1/2 transform -translate-y-1/2 z-0">
             <img
               src="/images/l-image-header-m.png"
               alt="Diplomatic emblem"
@@ -91,7 +94,7 @@ export default function Hero() {
               <span className="block animate-fade-in-up animation-delay-200">Troubled</span>
               <span className="block text-ambassador-gold animate-fade-in-up animation-delay-400">Waters</span>
             </h1>
-            <p className="text-2xl lg:text-3xl text-pearl-white/90 font-serif font-medium animate-fade-in-up animation-delay-600">
+            <p className="text-2xl lg:text-3xl text-pearl-white opacity-90 font-serif font-medium animate-fade-in-up animation-delay-600">
               A Diplomatic Memoir
             </p>
           </div>
@@ -100,9 +103,9 @@ export default function Hero() {
         <div className="grid lg:grid-cols-12 gap-8 items-center mb-12">
           <div className="lg:col-span-7 text-center lg:text-left">
             <div className="space-y-8 animate-fade-in-up animation-delay-1000">
-              <p className="text-lg lg:text-xl text-pearl-white/90 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              <p className="text-lg lg:text-xl text-pearl-white opacity-90 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 <span className="text-ambassador-gold font-semibold">Discover the untold stories</span> of Ambassador
-                Pamela Bridgewater&apos;s extraordinary journey through decades of international diplomacy - from
+                Pamela Bridgewater's extraordinary journey through decades of international diplomacy - from
                 groundbreaking negotiations with Nelson Mandela to building bridges across cultures and conflicts.
                 <span className="block mt-2 text-pearl-white font-medium">
                   Experience history through the eyes of a trailblazing diplomat.
@@ -113,7 +116,7 @@ export default function Hero() {
                 <Link href="/pre-order">
                   <Button
                     size="lg"
-                    className="bg-ambassador-gold hover:bg-ambassador-gold/90 text-diplomatic-navy font-bold px-10 py-5 text-lg rounded-xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-xl hover:shadow-2xl w-full"
+                    className="bg-ambassador-gold hover:bg-ambassador-gold hover:opacity-90 text-diplomatic-navy font-bold px-10 py-5 text-lg rounded-xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 shadow-xl hover:shadow-2xl w-full"
                   >
                     Pre-Order Now
                   </Button>
@@ -150,7 +153,7 @@ export default function Hero() {
                   <div className="absolute -right-2 top-2 w-4 h-80 lg:h-88 bg-gradient-to-b from-black to-gray-900 rounded-r-lg shadow-lg"></div>
 
                   <div
-                    className={`absolute inset-0 bg-ambassador-gold/20 rounded-lg blur-xl transition-opacity duration-500 ${isBookHovered ? "opacity-100" : "opacity-0"}`}
+                    className={`absolute inset-0 bg-ambassador-gold opacity-20 rounded-lg blur-xl transition-opacity duration-500 ${isBookHovered ? "opacity-100" : "opacity-0"}`}
                   ></div>
                 </div>
               </div>
@@ -159,7 +162,10 @@ export default function Hero() {
         </div>
 
         <div className="max-w-4xl mx-auto animate-fade-in-up animation-delay-800">
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-pearl-white/10 to-pearl-white/5 backdrop-blur-sm border border-pearl-white/20">
+          <div
+            className="relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-pearl-white to-pearl-white backdrop-blur-sm border border-pearl-white"
+            style={{ backgroundColor: "rgba(255, 255, 255, 0.1)", borderColor: "rgba(255, 255, 255, 0.2)" }}
+          >
             <div className="relative h-80 lg:h-96">
               {heroImages.map((image, index) => (
                 <div
@@ -172,34 +178,44 @@ export default function Hero() {
                       alt={image.alt}
                       className="max-w-full max-h-full object-contain drop-shadow-2xl"
                       onError={(e) => {
-                        e.currentTarget.src = "/placeholder.svg?height=400&width=800"
+                        const target = e.target as HTMLImageElement
+                        target.src = "/placeholder.svg?height=400&width=800"
                       }}
                     />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-diplomatic-navy/30 via-transparent to-transparent pointer-events-none"></div>
+                  <div
+                    className="absolute inset-0 bg-gradient-to-t from-diplomatic-navy via-transparent to-transparent pointer-events-none"
+                    style={{ background: "linear-gradient(to top, rgba(10, 22, 40, 0.3), transparent, transparent)" }}
+                  ></div>
                 </div>
               ))}
             </div>
 
             <button
               onClick={goToPrevious}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-pearl-white/20 backdrop-blur-sm text-pearl-white p-3 rounded-full hover:bg-ambassador-gold hover:text-diplomatic-navy transform hover:scale-110 transition-all duration-300 shadow-lg"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-pearl-white backdrop-blur-sm text-pearl-white p-3 rounded-full hover:bg-ambassador-gold hover:text-diplomatic-navy transform hover:scale-110 transition-all duration-300 shadow-lg"
+              style={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }}
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
               onClick={goToNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-pearl-white/20 backdrop-blur-sm text-pearl-white p-3 rounded-full hover:bg-ambassador-gold hover:text-diplomatic-navy transform hover:scale-110 transition-all duration-300 shadow-lg"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-pearl-white backdrop-blur-sm text-pearl-white p-3 rounded-full hover:bg-ambassador-gold hover:text-diplomatic-navy transform hover:scale-110 transition-all duration-300 shadow-lg"
+              style={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }}
             >
               <ChevronRight className="w-6 h-6" />
             </button>
 
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
               {heroImages.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide ? "bg-ambassador-gold scale-125 shadow-lg" : "bg-pearl-white/50 hover:bg-pearl-white/80"}`}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide ? "bg-ambassador-gold scale-125 shadow-lg" : "bg-pearl-white hover:bg-pearl-white"}`}
+                  style={{
+                    backgroundColor: index === currentSlide ? "#D4AF37" : "rgba(255, 255, 255, 0.5)",
+                    transform: index === currentSlide ? "scale(1.25)" : "scale(1)",
+                  }}
                 />
               ))}
             </div>
