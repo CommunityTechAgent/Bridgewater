@@ -11,8 +11,8 @@ export default function Testimonials() {
     {
       quote:
         "Ambassador Bridgewater's memoir is a masterclass in diplomacy. Her insights into conflict resolution and cultural understanding are invaluable for anyone interested in international relations.",
-      author: "Kevin Pryor",
-      title: "Community Tech",
+      author: "U.S. Ambassador Harry Thomas",
+      title: "former Director General of the Foreign Service,
       image: "/placeholder.svg?height=80&width=80",
     },
     {
