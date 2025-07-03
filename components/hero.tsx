@@ -102,7 +102,7 @@ export default function Hero() {
             <div className="space-y-8 animate-fade-in-up animation-delay-1000">
               <p className="text-lg lg:text-xl text-pearl-white/90 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 <span className="text-ambassador-gold font-semibold">Discover the untold stories</span> of Ambassador
-                Pamela Bridgewater's extraordinary journey through decades of international diplomacy—from
+                Pamela Bridgewater&apos;s extraordinary journey through decades of international diplomacy - from
                 groundbreaking negotiations with Nelson Mandela to building bridges across cultures and conflicts.
                 <span className="block mt-2 text-pearl-white font-medium">
                   Experience history through the eyes of a trailblazing diplomat.
