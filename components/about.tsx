@@ -31,7 +31,7 @@ export default function About() {
       year: "2003",
       shortDescription: "Special Coordinator for Peace in Liberia during the devastating civil war.",
       fullDescription:
-        "Led U.S. delegations to peace talks at the height of Liberia's devastating civil war, playing a key role in setting the nation on a path to recovery and lasting peace. Instrumental in ending one of Africa's most destructive conflicts through diplomatic courage and strategic negotiation.",
+        "Led U.S. delegation to peace talks at the height of Liberia's devastating civil war, playing a key role in setting the nation on a path to recovery and lasting peace. Instrumental in ending one of Africa's most destructive conflicts through diplomatic courage and strategic negotiation.",
       quote: "When diplomacy matters most, courage leads the way",
       bgGradient: "from-blue-100 to-indigo-100",
       iconColor: "text-blue-600",
@@ -44,7 +44,7 @@ export default function About() {
       year: "2010-2013",
       shortDescription: "U.S. Ambassador to Jamaica under President Barack Obama, focusing on regional security.",
       fullDescription:
-        "Repaired strained relations and restored the positive bilateral relationship through innovative and public diplomacy engagement. Transformed security cooperation in the Caribbean region.",
+        'Ambassador Bridgewater inherited severely strained U.S.-Jamaica relations after a 15-month diplomatic void caused by Jamaica\'s refusal to extradite drug lord Christopher "Dudas" Coke. She successfully rebuilt trust by broadening the partnership beyond security concerns, using comprehensive diplomatic tools including commercial, cultural, and public diplomacy to restore bilateral cooperation.',
       quote: "Building safer communities through diplomatic partnership",
       bgGradient: "from-green-100 to-teal-100",
       iconColor: "text-green-600",
@@ -211,7 +211,7 @@ export default function About() {
                           <h5 className="font-bold text-diplomatic-navy mb-2">{card.subtitle}</h5>
                           <p className="text-soft-charcoal leading-relaxed mb-4">{card.fullDescription}</p>
                           <blockquote className="italic text-ambassador-gold font-medium border-l-4 border-ambassador-gold pl-4">
-                            "{card.quote}"
+                            {card.quote}
                           </blockquote>
                         </div>
                       </div>

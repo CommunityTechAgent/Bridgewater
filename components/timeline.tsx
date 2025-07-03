@@ -12,8 +12,7 @@ export default function Timeline() {
       year: "1980",
       title: "Diplomatic Career Begins",
       location: "Washington, D.C.",
-      description:
-        "Joined the Foreign Service as a Junior Officer, beginning a journey that would span three decades.",
+      description: "Joined the Foreign Service as a Junior Officer, beginning a journey that would span three decades.",
       icon: Calendar,
     },
     {
@@ -27,7 +26,7 @@ export default function Timeline() {
       year: "2000",
       title: "Political Officer",
       location: "Republic of Benin",
-      description: "Helped solidify fledgling democratic institutions; hosted successful Africa Growth and Opportunity Act forum;  facilitated business and commercial opportunities.",
+      description: "Helped solidify fledgling democratic institutions; hosted successful Africa Growth and Opportunity Act forum; facilitated business and commercial opportunities.",
       icon: MapPin,
     },
     {
@@ -45,17 +44,31 @@ export default function Timeline() {
       icon: Award,
     },
     {
+      year: "2010",
+      title: "Champion of Security in Jamaica",
+      location: "Kingston, Jamaica",
+      description: "Ambassador Bridgewater repaired strained U.S.-Jamaica relations after extradition crisis by broadening partnership beyond security through comprehensive diplomatic engagement.",
+      icon: Award,
+    },
+    {
       year: "2015",
       title: "Senior Consultant & Advisor",
       location: "State Department",
-      description: "Served as Senior Advisor on African Affairs, shaping policy across the continent.",
+      description: "Served as Senior Advisor for the Department of State and other U.S. government agencies.",
       icon: Calendar,
+    },
+    {
+      year: "2019",
+      title: "Author",
+      location: "Global Release",
+      description: "Published 'Neutral on Nothing: The Social Activism of Rev. Dr. B. H. Hester'",
+      icon: Award,
     },
     {
       year: "2024",
       title: "Memoir Publication",
       location: "Global Release",
-      description: 'Published "Bridging Troubled Waters" sharing decades of diplomatic insights and experiences.',
+      description: "Published 'Bridging Troubled Waters' sharing decades of diplomatic insights and experiences.",
       icon: Award,
     },
   ]

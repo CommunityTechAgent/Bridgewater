@@ -18,15 +18,8 @@ export default function Testimonials() {
     {
       quote:
         "A compelling narrative that bridges the gap between policy and humanity. Bridgewater's experiences offer profound lessons in leadership and perseverance.",
-      author: "Ambassador John Chen",
-      title: "UN Special Envoy",
-      image: "/placeholder.svg?height=80&width=80",
-    },
-    {
-      quote:
-        "This memoir is essential reading for diplomats and peace-builders. Bridgewater's ability to find common ground in the most challenging situations is truly inspiring.",
-      author: "Prof. Maria Rodriguez",
-      title: "International Relations, Harvard",
+      author: "Dr Mike Levey",
+      title: "Special Envoy",
       image: "/placeholder.svg?height=80&width=80",
     },
   ]
@@ -70,9 +63,7 @@ export default function Testimonials() {
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          {/* Main Testimonial */}
           <div className="bg-pearl-white rounded-2xl shadow-xl p-8 lg:p-12 relative overflow-hidden">
-            {/* Quote Icon */}
             <div className="absolute top-6 right-6 text-ambassador-gold/20">
               <Quote className="w-16 h-16" />
             </div>
@@ -96,7 +87,6 @@ export default function Testimonials() {
             </div>
           </div>
 
-          {/* Navigation */}
           <div className="flex items-center justify-between mt-8">
             <button
               onClick={goToPrevious}
@@ -105,7 +95,6 @@ export default function Testimonials() {
               <ChevronLeft className="w-6 h-6" />
             </button>
 
-            {/* Dots */}
             <div className="flex gap-2">
               {testimonials.map((_, index) => (
                 <button
