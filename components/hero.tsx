@@ -17,10 +17,6 @@ export default function Hero() {
       src: "/images/hero-jamaica-map.png",
       alt: "Jamaica map",
     },
-    {
-      src: "/images/hero-belgium-map.png",
-      alt: "Belgium map",
-    },
   ]
 
   useEffect(() => {
@@ -30,7 +26,7 @@ export default function Hero() {
     return () => clearInterval(interval)
   }, [heroImages.length])
 
-  const goToSlide = (index) => {
+  const goToSlide = (index: number) => {
     setCurrentSlide(index)
   }
 
