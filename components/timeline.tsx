@@ -40,6 +40,7 @@ export default function Timeline() {
       year: "2000"
       location: "Republic of Benin",
       description: "Helped solidify fledgling democratic institutions; hosted successful Africa Growth and Opportunity Act forum;facilitated business and commercial opportunities.",
+      icon: Award
     },
     {
       year: "2005",
