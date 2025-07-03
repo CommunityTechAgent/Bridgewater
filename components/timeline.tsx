@@ -33,7 +33,7 @@ export default function Timeline() {
       year: "1996",
       title: "Deputy Chief of Mission",
       location: "Nassau Bahamas",
-      description: "Led successful negotiations that prevented escalation of regional conflicts.",
+      description: "Managed the embassy's large counternarcotics program, strengthened interagency cooperation; provided resources for the Bahamian courts and enhanced assistance and training for Bahamian security structures.",
       icon: Award,
     },
     {
