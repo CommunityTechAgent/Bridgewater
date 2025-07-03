@@ -17,10 +17,6 @@ export default function Hero() {
       src: "/images/hero-jamaica-map.png",
       alt: "Jamaica map",
     },
-    {
-      src: "/images/hero-belgium-map.png",
-      alt: "Belgium map",
-    },
   ]
 
   useEffect(() => {
@@ -30,6 +26,10 @@ export default function Hero() {
     return () => clearInterval(interval)
   }, [heroImages.length])
 
+  const goToSlide = (index) => {
+    setCurrentSlide(index)
+  }
+
   const goToPrevious = () => {
     setCurrentSlide((prev) => (prev - 1 + heroImages.length) % heroImages.length)
   }
@@ -38,43 +38,55 @@ export default function Hero() {
     setCurrentSlide((prev) => (prev + 1) % heroImages.length)
   }
 
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index)
-  }
-
   return (
     <section className="min-h-screen bg-diplomatic-navy relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-16 pt-24 pb-16">
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-serif text-pearl-white mb-6">Bridging Troubled Waters</h1>
-          <p className="text-2xl text-pearl-white">A Diplomatic Memoir</p>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-black text-pearl-white leading-tight mb-6">
+            <span className="block">Bridging</span>
+            <span className="block">Troubled</span>
+            <span className="block text-ambassador-gold">Waters</span>
+          </h1>
+          <p className="text-2xl lg:text-3xl text-pearl-white font-serif font-medium">A Diplomatic Memoir</p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
-          <div className="text-center lg:text-left">
-            <p className="text-lg text-pearl-white mb-8">
-              Discover the untold stories of Ambassador Pamela Bridgewater.
-            </p>
+        <div className="grid lg:grid-cols-12 gap-8 items-center mb-12">
+          <div className="lg:col-span-7 text-center lg:text-left">
+            <div className="space-y-8">
+              <p className="text-lg lg:text-xl text-pearl-white leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                Discover the untold stories of Ambassador Pamela Bridgewater extraordinary journey through decades of
+                international diplomacy.
+              </p>
 
-            <div className="space-y-4">
-              <Link href="/pre-order">
-                <Button className="bg-ambassador-gold text-diplomatic-navy w-full">Pre-Order Now</Button>
-              </Link>
-              <Link href="/discover-her-story">
-                <Button variant="outline" className="border-ambassador-gold text-ambassador-gold w-full bg-transparent">
-                  Discover Her Story
-                </Button>
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
+                <Link href="/pre-order">
+                  <Button
+                    size="lg"
+                    className="bg-ambassador-gold hover:bg-amber-500 text-diplomatic-navy font-bold px-10 py-5 text-lg rounded-xl w-full"
+                  >
+                    Pre-Order Now
+                  </Button>
+                </Link>
+                <Link href="/discover-her-story">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-2 border-ambassador-gold text-ambassador-gold hover:bg-ambassador-gold hover:text-diplomatic-navy px-10 py-5 text-lg font-bold rounded-xl bg-transparent w-full"
+                  >
+                    Discover Her Story
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
 
-          <div className="flex justify-center">
+          <div className="lg:col-span-5 flex justify-center">
             <div className="relative">
               <div className="relative w-64 h-80 lg:w-72 lg:h-88">
                 <div className="absolute inset-0 rounded-lg shadow-2xl overflow-hidden">
                   <img
                     src="/images/bridging-cover-hero.jpg"
-                    alt="Book cover"
+                    alt="Bridging Troubled Waters book cover"
                     className="w-full h-full object-contain"
                   />
                 </div>
