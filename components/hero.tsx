@@ -137,11 +137,7 @@ export default function Hero() {
               onMouseEnter={() => setIsBookHovered(true)}
               onMouseLeave={() => setIsBookHovered(false)}
             >
-              <div
-                className={`transform transition-all duration-500 ${
-                  isBookHovered ? "rotate-y-0 scale-105" : "rotate-y-[-15deg]"
-                }`}
-              >
+              <div className={`transform transition-all duration-500 ${isBookHovered ? "scale-105" : ""}`}>
                 <div className="relative w-64 h-80 lg:w-72 lg:h-88">
                   <div className="absolute inset-0 rounded-lg shadow-2xl overflow-hidden">
                     <img
@@ -154,9 +150,7 @@ export default function Hero() {
                   <div className="absolute -right-2 top-2 w-4 h-80 lg:h-88 bg-gradient-to-b from-black to-gray-900 rounded-r-lg shadow-lg"></div>
 
                   <div
-                    className={`absolute inset-0 bg-ambassador-gold/20 rounded-lg blur-xl transition-opacity duration-500 ${
-                      isBookHovered ? "opacity-100" : "opacity-0"
-                    }`}
+                    className={`absolute inset-0 bg-ambassador-gold/20 rounded-lg blur-xl transition-opacity duration-500 ${isBookHovered ? "opacity-100" : "opacity-0"}`}
                   ></div>
                 </div>
               </div>
@@ -170,9 +164,7 @@ export default function Hero() {
               {heroImages.map((image, index) => (
                 <div
                   key={index}
-                  className={`absolute inset-0 transition-opacity duration-1000 ${
-                    index === currentSlide ? "opacity-100" : "opacity-0"
-                  }`}
+                  className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? "opacity-100" : "opacity-0"}`}
                 >
                   <div className="w-full h-full flex items-center justify-center p-12">
                     <img
@@ -207,11 +199,7 @@ export default function Hero() {
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide
-                      ? "bg-ambassador-gold scale-125 shadow-lg"
-                      : "bg-pearl-white/50 hover:bg-pearl-white/80"
-                  }`}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide ? "bg-ambassador-gold scale-125 shadow-lg" : "bg-pearl-white/50 hover:bg-pearl-white/80"}`}
                 />
               ))}
             </div>
