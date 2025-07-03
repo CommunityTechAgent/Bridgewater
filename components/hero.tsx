@@ -13,23 +13,23 @@ export default function Hero() {
   const heroImages = [
     {
       src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/South%20Africa-KrtarH7JxobEydl6bqFx88OXa3B7RM.png",
-      alt: "South Africa flag map representing Ambassador Bridgewater historic service during apartheid transition",
+      alt: "South Africa map",
     },
     {
       src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Map_of_Bahamas-f2aU0pWtFuN9PX6Emt2ahEuHtbynRp.png",
-      alt: "Bahamas flag map representing Ambassador Bridgewater service as Deputy Chief of Mission",
+      alt: "Bahamas map",
     },
     {
       src: "/images/hero-ghana-map.png",
-      alt: "Ghana flag map representing Ambassador Bridgewater service as U.S. Ambassador to Ghana",
+      alt: "Ghana map",
     },
     {
       src: "/images/hero-jamaica-map.png",
-      alt: "Jamaica flag map representing Ambassador Bridgewater service as U.S. Ambassador to Jamaica",
+      alt: "Jamaica map",
     },
     {
       src: "/images/hero-belgium-map.png",
-      alt: "Belgium flag map representing Ambassador Bridgewater diplomatic service in Brussels",
+      alt: "Belgium map",
     },
   ]
 
@@ -104,9 +104,9 @@ export default function Hero() {
                 <span className="text-ambassador-gold font-semibold">Discover the untold stories</span> of Ambassador
                 Pamela Bridgewater extraordinary journey through decades of international diplomacy - from
                 groundbreaking negotiations with Nelson Mandela to building bridges across cultures and conflicts.
-                <span className="block mt-2 text-pearl-white font-medium">
-                  Experience history through the eyes of a trailblazing diplomat.
-                </span>
+              </p>
+              <p className="text-pearl-white font-medium">
+                Experience history through the eyes of a trailblazing diplomat.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
@@ -137,21 +137,16 @@ export default function Hero() {
               onMouseEnter={() => setIsBookHovered(true)}
               onMouseLeave={() => setIsBookHovered(false)}
             >
-              <div className={`transform transition-all duration-500 ${isBookHovered ? "scale-105" : ""}`}>
+              <div className="transform transition-all duration-500 hover:scale-105">
                 <div className="relative w-64 h-80 lg:w-72 lg:h-88">
                   <div className="absolute inset-0 rounded-lg shadow-2xl overflow-hidden">
                     <img
                       src="/images/bridging-cover-hero.jpg"
-                      alt="Bridging Troubled Waters book cover by Ambassador Pamela Bridgewater"
+                      alt="Bridging Troubled Waters book cover"
                       className="w-full h-full object-contain"
                     />
                   </div>
-
                   <div className="absolute -right-2 top-2 w-4 h-80 lg:h-88 bg-gradient-to-b from-black to-gray-900 rounded-r-lg shadow-lg"></div>
-
-                  <div
-                    className={`absolute inset-0 bg-ambassador-gold opacity-20 rounded-lg blur-xl transition-opacity duration-500 ${isBookHovered ? "opacity-100" : "opacity-0"}`}
-                  ></div>
                 </div>
               </div>
             </div>
@@ -164,7 +159,8 @@ export default function Hero() {
               {heroImages.map((image, index) => (
                 <div
                   key={index}
-                  className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? "opacity-100" : "opacity-0"}`}
+                  className="absolute inset-0 transition-opacity duration-1000"
+                  style={{ opacity: index === currentSlide ? 1 : 0 }}
                 >
                   <div className="w-full h-full flex items-center justify-center p-12">
                     <img
@@ -173,7 +169,6 @@ export default function Hero() {
                       className="max-w-full max-h-full object-contain drop-shadow-2xl"
                     />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-diplomatic-navy via-transparent to-transparent pointer-events-none opacity-30"></div>
                 </div>
               ))}
             </div>
@@ -196,7 +191,11 @@ export default function Hero() {
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide ? "bg-ambassador-gold scale-125 shadow-lg" : "bg-white bg-opacity-50 hover:bg-opacity-80"}`}
+                  className="w-3 h-3 rounded-full transition-all duration-300"
+                  style={{
+                    backgroundColor: index === currentSlide ? "#D4AF37" : "rgba(255, 255, 255, 0.5)",
+                    transform: index === currentSlide ? "scale(1.25)" : "scale(1)",
+                  }}
                 />
               ))}
             </div>
