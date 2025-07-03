@@ -70,10 +70,6 @@ export default function Contact() {
                 <div className="bg-ambassador-gold p-3 rounded-full group-hover:scale-110 transition-transform duration-300">
                   <Phone className="w-6 h-6 text-diplomatic-navy" />
                 </div>
-                <div>
-                  <h3 className="font-bold text-diplomatic-navy mb-1">Phone</h3>
-                  <p className="text-soft-charcoal">+1 (555) 123-4567</p>
-                </div>
               </div>
 
               <div className="flex items-start gap-4 group">
