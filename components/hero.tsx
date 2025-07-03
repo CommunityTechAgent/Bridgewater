@@ -28,7 +28,7 @@ export default function Hero() {
       alt: "Jamaica flag map representing Ambassador Bridgewater's service as U.S. Ambassador to Jamaica",
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Map_of_Belgium-ab68mCAPkmf2taFox8iUGJ5muBatZV.png",
+      src: "/images/hero-belgium-map.png",
       alt: "Belgium flag map representing Ambassador Bridgewater's diplomatic service in Brussels",
     },
   ]
