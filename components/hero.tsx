@@ -12,20 +12,24 @@ export default function Hero() {
 
   const heroImages = [
     {
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/map_belgium.jpg-cC6CSmjen21ZmnW4DOUyMdjPy2BOLt.jpeg",
+      alt: "Belgium flag map representing Ambassador Bridgewater's diplomatic service in Brussels",
+    },
+    {
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/South%20Africa-KrtarH7JxobEydl6bqFx88OXa3B7RM.png",
+      alt: "South Africa flag map representing Ambassador Bridgewater's historic service during apartheid transition",
+    },
+    {
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/the_island_of_the_Bahamas-gatvsc946Q7QtqVIabvfYTnL39p1hz.png",
+      alt: "Bahamas flag map representing Ambassador Bridgewater's service as Deputy Chief of Mission",
+    },
+    {
       src: "/images/hero-ghana-map.png",
-      alt: "Ghana flag map representing Ambassador Bridgewater's service in Ghana",
+      alt: "Ghana flag map representing Ambassador Bridgewater's service as U.S. Ambassador to Ghana",
     },
     {
       src: "/images/hero-jamaica-map.png",
-      alt: "Jamaica flag map representing Ambassador Bridgewater's service in Jamaica",
-    },
-    {
-      src: "/images/usa-map.png",
-      alt: "United States flag map representing Ambassador Bridgewater's diplomatic service",
-    },
-    {
-      src: "/images/hero-ghana-map-2.png",
-      alt: "Ghana flag map highlighting diplomatic relations",
+      alt: "Jamaica flag map representing Ambassador Bridgewater's service as U.S. Ambassador to Jamaica",
     },
   ]
 
@@ -161,7 +165,7 @@ export default function Hero() {
         </div>
 
         <div className="max-w-4xl mx-auto animate-fade-in-up animation-delay-800">
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-pearl-white/10 to-pearl-white/5 backdrop-blur-sm border border-pearl-white/20">
             <div className="relative h-80 lg:h-96">
               {heroImages.map((image, index) => (
                 <div
@@ -170,28 +174,30 @@ export default function Hero() {
                     index === currentSlide ? "opacity-100" : "opacity-0"
                   }`}
                 >
-                  <img
-                    src={image.src || "/placeholder.svg"}
-                    alt={image.alt}
-                    className="w-full h-full object-contain p-8"
-                    onError={(e) => {
-                      e.currentTarget.src = "/placeholder.svg?height=400&width=800"
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-diplomatic-navy/60 via-transparent to-transparent"></div>
+                  <div className="w-full h-full flex items-center justify-center p-12">
+                    <img
+                      src={image.src || "/placeholder.svg"}
+                      alt={image.alt}
+                      className="max-w-full max-h-full object-contain drop-shadow-2xl"
+                      onError={(e) => {
+                        e.currentTarget.src = "/placeholder.svg?height=400&width=800"
+                      }}
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-diplomatic-navy/30 via-transparent to-transparent pointer-events-none"></div>
                 </div>
               ))}
             </div>
 
             <button
               onClick={goToPrevious}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-pearl-white/20 backdrop-blur-sm text-pearl-white p-3 rounded-full hover:bg-ambassador-gold hover:text-diplomatic-navy transform hover:scale-110 transition-all duration-300"
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-pearl-white/20 backdrop-blur-sm text-pearl-white p-3 rounded-full hover:bg-ambassador-gold hover:text-diplomatic-navy transform hover:scale-110 transition-all duration-300 shadow-lg"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
               onClick={goToNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-pearl-white/20 backdrop-blur-sm text-pearl-white p-3 rounded-full hover:bg-ambassador-gold hover:text-diplomatic-navy transform hover:scale-110 transition-all duration-300"
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-pearl-white/20 backdrop-blur-sm text-pearl-white p-3 rounded-full hover:bg-ambassador-gold hover:text-diplomatic-navy transform hover:scale-110 transition-all duration-300 shadow-lg"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
@@ -203,7 +209,7 @@ export default function Hero() {
                   onClick={() => goToSlide(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentSlide
-                      ? "bg-ambassador-gold scale-125"
+                      ? "bg-ambassador-gold scale-125 shadow-lg"
                       : "bg-pearl-white/50 hover:bg-pearl-white/80"
                   }`}
                 />
