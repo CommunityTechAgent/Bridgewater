@@ -22,13 +22,6 @@ export default function Testimonials() {
       title: "Special Envoy",
       image: "/placeholder.svg?height=80&width=80",
     },
-    {
-      quote:
-        "This memoir is essential reading for diplomats and peace-builders. Bridgewater's ability to find common ground in the most challenging situations is truly inspiring.",
-      author: "Prof. Maria Rodriguez",
-      title: "International Relations",
-      image: "/placeholder.svg?height=80&width=80",
-    },
   ]
 
   useEffect(() => {
