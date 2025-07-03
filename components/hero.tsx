@@ -17,6 +17,10 @@ export default function Hero() {
       src: "/images/hero-jamaica-map.png",
       alt: "Jamaica map",
     },
+    {
+      src: "/images/hero-belgium-map.png",
+      alt: "Belgium map",
+    },
   ]
 
   useEffect(() => {
