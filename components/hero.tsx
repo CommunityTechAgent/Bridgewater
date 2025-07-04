@@ -184,7 +184,7 @@ export default function Hero() {
                     transition: "opacity 1s",
                   }}
                 >
-                  <div className="w-full h-full flex items-center justify-center p-8 md:p-12 bg-pearl-white/80 rounded-2xl shadow-inner">
+                  <div className="w-full h-full flex items-center justify-center p-8 md:p-12 bg-blue-900/20 rounded-2xl shadow-inner backdrop-blur-sm">
                     <img
                       src={image.src || "/placeholder.svg"}
                       alt={image.alt}
