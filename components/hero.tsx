@@ -16,19 +16,19 @@ export default function Hero() {
       alt: "Ghana map",
     },
     {
-      src: "/images/Map_of_Belgium.png",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Map_of_Belgium-LvaA04CBIFigpTmQHtguUoY8CaTKGr.png",
       alt: "Belgium map",
     },
     {
-      src: "/images/South Africa.png",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/South%20Africa-bQDellbZZ3XVygp7FKNWy4n3QnyFy5.png",
       alt: "South Africa map",
     },
     {
-      src: "/images/Map_of_Bahamas.png",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Map_of_Bahamas-0gMWkVfGsNS2ORiWZFqFbC9NGHWXO3.png",
       alt: "Bahamas map",
     },
     {
-      src: "/images/usa_map_a.png",
+      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/usa_map_a-1PG2BVY6drqNm8Cgq9x3fhs7RjzVcB.png",
       alt: "USA map",
     },
     {
@@ -45,11 +45,11 @@ export default function Hero() {
       return new Promise((resolve, reject) => {
         const img = new Image()
         img.onload = () => {
-          setLoadedImages(prev => prev + 1)
+          setLoadedImages((prev) => prev + 1)
           resolve(image)
         }
         img.onerror = () => {
-          setLoadedImages(prev => prev + 1)
+          setLoadedImages((prev) => prev + 1)
           resolve(image) // Resolve even on error to continue
         }
         img.src = image.src
@@ -62,18 +62,20 @@ export default function Hero() {
       }, 4000)
     }
 
-    Promise.all(imagePromises).then(() => {
-      setImagesLoaded(true)
-      // Start auto-rotation after images are loaded
-      setTimeout(startAutoRotation, 1000)
-    }).catch(() => {
-      // Fallback: if image loading fails, still show the slider after a timeout
-      setTimeout(() => {
+    Promise.all(imagePromises)
+      .then(() => {
         setImagesLoaded(true)
-        // Start auto-rotation even if images failed
+        // Start auto-rotation after images are loaded
         setTimeout(startAutoRotation, 1000)
-      }, 2000)
-    })
+      })
+      .catch(() => {
+        // Fallback: if image loading fails, still show the slider after a timeout
+        setTimeout(() => {
+          setImagesLoaded(true)
+          // Start auto-rotation even if images failed
+          setTimeout(startAutoRotation, 1000)
+        }, 2000)
+      })
 
     return () => {
       if (interval) {
@@ -100,7 +102,7 @@ export default function Hero() {
         <div className="text-center">
           <div className="text-pearl-white text-xl mb-4">Loading Ambassador Bridgewater's Story...</div>
           <div className="w-64 bg-pearl-white/20 rounded-full h-2">
-            <div 
+            <div
               className="bg-ambassador-gold h-2 rounded-full transition-all duration-300"
               style={{ width: `${(loadedImages / heroImages.length) * 100}%` }}
             ></div>
@@ -187,7 +189,7 @@ export default function Hero() {
                       src={image.src || "/placeholder.svg"}
                       alt={image.alt}
                       className="max-w-full max-h-full object-contain drop-shadow-xl"
-                      style={{background: 'transparent'}}
+                      style={{ background: "transparent" }}
                     />
                   </div>
                 </div>
