@@ -16,6 +16,22 @@ export default function Hero() {
       alt: "Ghana map",
     },
     {
+      src: "/images/Map_of_Belgium.png",
+      alt: "Belgium map",
+    },
+    {
+      src: "/images/South Africa.png",
+      alt: "South Africa map",
+    },
+    {
+      src: "/images/Map_of_Bahamas.png",
+      alt: "Bahamas map",
+    },
+    {
+      src: "/images/usa_map_a.png",
+      alt: "USA map",
+    },
+    {
       src: "/images/hero-jamaica-map.png",
       alt: "Jamaica map",
     },
@@ -160,17 +176,18 @@ export default function Hero() {
               {heroImages.map((image, index) => (
                 <div
                   key={index}
-                  className="absolute inset-0"
+                  className="absolute inset-0 flex items-center justify-center"
                   style={{
                     opacity: index === currentSlide ? 1 : 0,
                     transition: "opacity 1s",
                   }}
                 >
-                  <div className="w-full h-full flex items-center justify-center p-12">
+                  <div className="w-full h-full flex items-center justify-center p-8 md:p-12 bg-pearl-white/80 rounded-2xl shadow-inner">
                     <img
                       src={image.src || "/placeholder.svg"}
                       alt={image.alt}
-                      className="max-w-full max-h-full object-contain"
+                      className="max-w-full max-h-full object-contain drop-shadow-xl"
+                      style={{background: 'transparent'}}
                     />
                   </div>
                 </div>
