@@ -6,7 +6,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, Phone, MapPin, Send, BookOpen } from "lucide-react"
+import { Mail, MapPin, Send, BookOpen } from "lucide-react"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -63,12 +63,6 @@ export default function Contact() {
                 <div>
                   <h3 className="font-bold text-diplomatic-navy mb-1">Email</h3>
                   <p className="text-soft-charcoal">contact@bridgingtroubledwaters.com</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 group">
-                <div className="bg-ambassador-gold p-3 rounded-full group-hover:scale-110 transition-transform duration-300">
-                  <Phone className="w-6 h-6 text-diplomatic-navy" />
                 </div>
               </div>
 
