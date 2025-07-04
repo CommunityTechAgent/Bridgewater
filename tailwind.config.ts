@@ -45,7 +45,7 @@ const config: Config = {
           foreground: "hsl(var(--card-foreground))",
         },
         // Custom Bridgewater colors
-        "diplomatic-navy": "#0A1628",
+        "diplomatic-navy": "#183B6B",
         "ambassador-gold": "#D4AF37",
         "pearl-white": "#FEFEFE",
         "platinum-gray": "#F8F9FA",
