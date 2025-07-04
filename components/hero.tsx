@@ -123,7 +123,7 @@ export default function Hero() {
             <img
               src="/images/laurel-wreath.png"
               alt="Decorative laurel wreath"
-              className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 opacity-80"
+              className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 opacity-80"
             />
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-black text-pearl-white leading-tight">
               <span className="block">Bridging</span>
@@ -133,7 +133,7 @@ export default function Hero() {
             <img
               src="/images/laurel-wreath.png"
               alt="Decorative laurel wreath"
-              className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 opacity-80"
+              className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 opacity-80"
             />
           </div>
           <p className="text-2xl lg:text-3xl text-pearl-white font-serif font-medium">A Diplomatic Memoir</p>
