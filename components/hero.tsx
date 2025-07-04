@@ -119,11 +119,23 @@ export default function Hero() {
     <section className="min-h-screen bg-diplomatic-navy relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-16 pt-24 pb-16">
         <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-black text-pearl-white leading-tight mb-6">
-            <span className="block">Bridging</span>
-            <span className="block">Troubled</span>
-            <span className="block text-ambassador-gold">Waters</span>
-          </h1>
+          <div className="flex items-center justify-center gap-8 mb-6">
+            <img
+              src="/images/laurel-wreath.png"
+              alt="Decorative laurel wreath"
+              className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 opacity-80"
+            />
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-black text-pearl-white leading-tight">
+              <span className="block">Bridging</span>
+              <span className="block">Troubled</span>
+              <span className="block text-ambassador-gold">Waters</span>
+            </h1>
+            <img
+              src="/images/laurel-wreath.png"
+              alt="Decorative laurel wreath"
+              className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 opacity-80"
+            />
+          </div>
           <p className="text-2xl lg:text-3xl text-pearl-white font-serif font-medium">A Diplomatic Memoir</p>
         </div>
 
