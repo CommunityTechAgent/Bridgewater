@@ -143,7 +143,7 @@ export default function Hero() {
           <div className="lg:col-span-7 text-center lg:text-left">
             <div className="space-y-8">
               <p className="text-lg lg:text-xl text-pearl-white leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Discover the untold stories of Ambassador Pamela Bridgewater extraordinary journey through decades of
+                Discover the untold stories of Ambassador Pamela Bridgewater's extraordinary journey through decades of
                 international diplomacy.
               </p>
 
