@@ -23,18 +23,18 @@ export default function Timeline() {
       icon: MapPin,
     },
     {
+      year: "1996",
+      title: "Deputy Chief of Mission",
+      location: "Nassau, The Bahamas",
+      description: "Managed the embassy's large counternarcotics program, strengthened interagency cooperation; provided resources for the Bahamian courts and enhanced assistance and training for Bahamian security structures.",
+      icon: Award,
+    },
+    {
       year: "2000",
       title: "Ambassador to Benin",
       location: "Republic of Benin",
       description: "Helped solidify fledgling democratic institutions; hosted successful Africa Growth and Opportunity Act forum; facilitated business and commercial opportunities.",
       icon: MapPin,
-    },
-    {
-      year: "2001",
-      title: "Deputy Chief of Mission",
-      location: "Nassau, The Bahamas",
-      description: "Managed the embassy's large counternarcotics program, strengthened interagency cooperation; provided resources for the Bahamian courts and enhanced assistance and training for Bahamian security structures.",
-      icon: Award,
     },
     {
       year: "2005",
