@@ -20,7 +20,7 @@ export default function Hero() {
       alt: "Belgium map",
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/South_Africa_Map-QtfkD2zeHRVxZuekh6pBR7HGtOLNx7.png",
+      src: "/images/south-africa-flag-map.png",
       alt: "South Africa map",
     },
     {
