@@ -24,7 +24,7 @@ export default function Timeline() {
     },
     {
       year: "2000",
-      title: "Political Officer",
+      title: "Ambassador to Benin",
       location: "Republic of Benin",
       description: "Helped solidify fledgling democratic institutions; hosted successful Africa Growth and Opportunity Act forum; facilitated business and commercial opportunities.",
       icon: MapPin,
