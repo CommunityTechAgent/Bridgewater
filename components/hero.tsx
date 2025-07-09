@@ -20,7 +20,7 @@ export default function Hero() {
       alt: "Belgium map",
     },
     {
-      src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/South%20Africa-bQDellbZZ3XVygp7FKNWy4n3QnyFy5.png",
+      src: "/images/south-africa-flag-map.png",
       alt: "South Africa map",
     },
     {
@@ -119,11 +119,23 @@ export default function Hero() {
     <section className="min-h-screen bg-diplomatic-navy relative overflow-hidden">
       <div className="container mx-auto px-4 lg:px-16 pt-24 pb-16">
         <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-black text-pearl-white leading-tight mb-6">
-            <span className="block">Bridging</span>
-            <span className="block">Troubled</span>
-            <span className="block text-ambassador-gold">Waters</span>
-          </h1>
+          <div className="flex items-center justify-center gap-8 mb-6">
+            <img
+              src="/images/laurel-wreath.png"
+              alt="Decorative laurel wreath"
+              className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 opacity-80"
+            />
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-black text-pearl-white leading-tight">
+              <span className="block">Bridging</span>
+              <span className="block">Troubled</span>
+              <span className="block text-ambassador-gold">Waters</span>
+            </h1>
+            <img
+              src="/images/laurel-wreath.png"
+              alt="Decorative laurel wreath"
+              className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 opacity-80"
+            />
+          </div>
           <p className="text-2xl lg:text-3xl text-pearl-white font-serif font-medium">A Diplomatic Memoir</p>
         </div>
 
@@ -131,7 +143,7 @@ export default function Hero() {
           <div className="lg:col-span-7 text-center lg:text-left">
             <div className="space-y-8">
               <p className="text-lg lg:text-xl text-pearl-white leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Discover the untold stories of Ambassador Pamela Bridgewater extraordinary journey through decades of
+                Discover the untold stories of Ambassador Pamela Bridgewater's extraordinary journey through decades of
                 international diplomacy.
               </p>
 
@@ -184,7 +196,7 @@ export default function Hero() {
                     transition: "opacity 1s",
                   }}
                 >
-                  <div className="w-full h-full flex items-center justify-center p-8 md:p-12 bg-blue-900/20 rounded-2xl shadow-inner backdrop-blur-sm">
+                  <div className="w-full h-full flex items-center justify-center p-8 md:p-12 rounded-2xl">
                     <img
                       src={image.src || "/placeholder.svg"}
                       alt={image.alt}

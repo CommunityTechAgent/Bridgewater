@@ -30,7 +30,7 @@ export default function Achievements() {
       icon: BookOpen,
       title: "Distinguished Author",
       description: "Published acclaimed memoir sharing insights from decades of diplomatic experience.",
-      year: "2020",
+      year: "2025",
     },
   ]
 
