@@ -22,17 +22,25 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-
-    // Reset form after success message
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+      if (response.ok) {
+        setIsSubmitted(true)
+        setFormData({ name: '', email: '', subject: '', message: '' })
+        setTimeout(() => setIsSubmitted(false), 3000)
+      } else {
+        // Optionally handle error
+        setIsSubmitted(false)
+      }
+    } catch (error) {
+      // Optionally handle error
       setIsSubmitted(false)
-      setFormData({ name: "", email: "", subject: "", message: "" })
-    }, 3000)
+    }
+    setIsSubmitting(false)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -62,7 +70,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-bold text-diplomatic-navy mb-1">Email</h3>
-                  <p className="text-soft-charcoal">contact@bridgingtroubledwaters.com</p>
+                  <p className="text-soft-charcoal">bkroystonpublishing@gmail.com</p>
                 </div>
               </div>
 

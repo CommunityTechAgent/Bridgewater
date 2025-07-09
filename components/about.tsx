@@ -119,7 +119,6 @@ export default function About() {
               {[
                 { number: "30+", label: "Years in Diplomacy" },
                 { number: "15", label: "Countries Served" },
-                { number: "50+", label: "Peace Negotiations" },
                 { number: "5", label: "International Awards" },
               ].map((stat, index) => (
                 <div

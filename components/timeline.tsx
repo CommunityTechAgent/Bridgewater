@@ -65,7 +65,7 @@ export default function Timeline() {
       icon: Award,
     },
     {
-      year: "2024",
+      year: "2025",
       title: "Memoir Publication",
       location: "Global Release",
       description: "Published 'Bridging Troubled Waters' sharing decades of diplomatic insights and experiences.",
