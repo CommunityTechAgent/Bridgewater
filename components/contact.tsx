@@ -6,7 +6,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, MapPin, Send, BookOpen } from "lucide-react"
+import { Mail, MapPin, Send, BookOpen, AlertCircle, CheckCircle } from "lucide-react"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -17,10 +17,12 @@ export default function Contact() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState("")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setError("")
 
     try {
       const response = await fetch('/api/contact', {
@@ -28,17 +30,18 @@ export default function Contact() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       })
-      if (response.ok) {
+      
+      const result = await response.json()
+      
+      if (response.ok && result.success) {
         setIsSubmitted(true)
         setFormData({ name: '', email: '', subject: '', message: '' })
-        setTimeout(() => setIsSubmitted(false), 3000)
+        setTimeout(() => setIsSubmitted(false), 5000)
       } else {
-        // Optionally handle error
-        setIsSubmitted(false)
+        setError(result.error || 'Failed to send message. Please try again.')
       }
     } catch (error) {
-      // Optionally handle error
-      setIsSubmitted(false)
+      setError('Network error. Please check your connection and try again.')
     }
     setIsSubmitting(false)
   }
@@ -48,6 +51,8 @@ export default function Contact() {
       ...prev,
       [e.target.name]: e.target.value,
     }))
+    // Clear error when user starts typing
+    if (error) setError("")
   }
 
   return (
@@ -124,6 +129,29 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div className="lg:col-span-8">
+            {/* Success Message */}
+            {isSubmitted && (
+              <div className="mb-6 p-6 bg-green-50 border border-green-200 rounded-lg flex items-start gap-4">
+                <CheckCircle className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" />
+                <div>
+                  <h4 className="font-semibold text-green-800 text-lg mb-2">Thank You!</h4>
+                  <p className="text-green-700 mb-2">Your message has been sent successfully.</p>
+                  <p className="text-green-700 text-sm">We will be in touch with you soon.</p>
+                </div>
+              </div>
+            )}
+
+            {/* Error Message */}
+            {error && (
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center gap-3">
+                <AlertCircle className="w-5 h-5 text-red-600" />
+                <div>
+                  <h4 className="font-semibold text-red-800">Error Sending Message</h4>
+                  <p className="text-red-700 text-sm">{error}</p>
+                </div>
+              </div>
+            )}
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
@@ -138,6 +166,7 @@ export default function Contact() {
                     required
                     className="border-soft-charcoal/20 focus:border-ambassador-gold focus:ring-ambassador-gold/20"
                     placeholder="Your full name"
+                    disabled={isSubmitting}
                   />
                 </div>
 
@@ -154,6 +183,7 @@ export default function Contact() {
                     required
                     className="border-soft-charcoal/20 focus:border-ambassador-gold focus:ring-ambassador-gold/20"
                     placeholder="your.email@example.com"
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>
@@ -170,6 +200,7 @@ export default function Contact() {
                   required
                   className="border-soft-charcoal/20 focus:border-ambassador-gold focus:ring-ambassador-gold/20"
                   placeholder="What would you like to discuss?"
+                  disabled={isSubmitting}
                 />
               </div>
 
@@ -186,6 +217,7 @@ export default function Contact() {
                   rows={6}
                   className="border-soft-charcoal/20 focus:border-ambassador-gold focus:ring-ambassador-gold/20 resize-none"
                   placeholder="Please share your message, inquiry, or speaking engagement details..."
+                  disabled={isSubmitting}
                 />
               </div>
 
@@ -201,7 +233,7 @@ export default function Contact() {
                   </div>
                 ) : isSubmitted ? (
                   <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 bg-success-green rounded-full"></div>
+                    <CheckCircle className="w-4 h-4" />
                     Message Sent!
                   </div>
                 ) : (
